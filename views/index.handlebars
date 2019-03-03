@@ -1,0 +1,17 @@
+<h1>👨‍🍳Burger Time 👩‍🍳‍</h1>
+
+<h2>🍔 Eaten Burgers 🍔</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      <li>
+        {{burger_name}}
+
+        <button class="change-eaten" data-id="{{id}}" data-newEaten="{{devoured}}">
+          {{#if devoured}}Devoured{{else}}Not Eaten{{/if}}
+        </button>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
