@@ -1,5 +1,5 @@
 $(function() {
-  $(".change-eaten").on("click", event => {
+  $(".change-eaten").on("click", function(event) {
     let id = $(this).data("id");
 
     // Send the PUT request.
