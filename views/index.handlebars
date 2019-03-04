@@ -1,17 +1,36 @@
 <h1>👨‍🍳Burger Time 👩‍🍳‍</h1>
 
-<h2>🍔 Eaten Burgers 🍔</h2>
+<h2>🍔 Burgers to Eat🍔</h2>
 
 <ul>
   {{#each burgers}}
-    {{#unless devoured}}
-      <li>
-        {{burger_name}}
+  {{#unless devoured}}
+  <li>
+    {{burger_name}}
 
-        <button class="change-eaten" data-id="{{id}}" data-newEaten="{{devoured}}">
-          {{#if devoured}}Devoured{{else}}Not Eaten{{/if}}
-        </button>
-      </li>
-    {{/unless}}
+    <button class="change-eaten" data-id="{{id}}" data-newEaten="{{devoured}}">
+      {{#if devoured}}Devoured{{else}}Not Eaten{{/if}}
+    </button>
+  </li>
+  {{/unless}}
   {{/each}}
 </ul>
+
+<h2>🍔 Eaten burgers 🍔</h2>
+
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  <li>
+    {{burger_name}}
+  </li>
+  {{/if}}
+  {{/each}}
+</ul>
+
+<h2>🍔 Create a new Burger 🍔</h2>
+<form class="add-burger-form">
+  <label for="new-burger-name">Burger name =></label>
+  <input type="text" id="new-burger-name" name="name">
+  <button type="submit">➕ 🍔 </button>
+</form>

@@ -39,7 +39,6 @@ function objToSql(ob) {
 }
 
 const orm = {
-  //TODO: TEST: SelectAll
   selectAll: (tableInput, cb) => {
     let queryString = `SELECT * FROM ${tableInput};`;
     connection.query(queryString, (err, result) => {
